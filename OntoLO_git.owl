@@ -1,0 +1,3316 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#"
+     xml:base="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:sapes="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes">
+        <rdfs:comment xml:lang="pt">Formaliza a Taxonomia dos Objetivos Educacionais de Bloom e a Taxonomia Revisada de Bloom</rdfs:comment>
+        <rdfs:label xml:lang="pt">OntoLO - Onologia Objetivos Educacionais</rdfs:label>
+        <owl:versionInfo xml:lang="pt">3.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#atividade_encontrada -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#atividade_encontrada">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Atividade"/>
+        <rdfs:label xml:lang="pt">atividade_encontrada</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#classificacao -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#classificacao">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estrutura_classificacao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#competencia -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#competencia">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Atividade"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Competencia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#competencia_atingida -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#competencia_atingida">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Atividade"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Competencia"/>
+        <rdfs:label xml:lang="pt">competencia_atingida</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desempenho_atingido -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desempenho_atingido">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+        <rdfs:label xml:lang="pt">desempenho_atingido</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desempenho_atual -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desempenho_atual">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+        <rdfs:label xml:lang="pt">desempenho_atual</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desempenho_similar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desempenho_similar">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Atividade"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Competencia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#objetivo_atingido -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#objetivo_atingido">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_atividade -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_atividade">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Atividade"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_classificacao -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_classificacao">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Atividade"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_competencia -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_competencia">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Atividade"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Competencia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_comportamento -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_comportamento">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_desempenho -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_desempenho">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_nivel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_nivel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Atividade"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_objetivo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_objetivo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_verbo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_verbo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#verbo_encontrado -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#verbo_encontrado">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label xml:lang="pt">verbo_encontrado</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Atividade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Atividade"/>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Competencia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Competencia"/>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_1"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_3 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_3">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_2"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_4 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_4">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_3"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_5 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_5">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_4"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_6 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_6">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estrutura_classificacao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estrutura_classificacao"/>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_1"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_3 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_3">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_2"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_4 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_4">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_3"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_5 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_5">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_4"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_6 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_6">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_5"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Aldemario -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Aldemario">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#selecione"/>
+        <rdfs:label xml:lang="pt">Aldemario</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Alexsandro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Alexsandro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <atividade_encontrada rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#O_que_eh_Maquina_de_Turing"/>
+        <rdfs:label xml:lang="pt">Alexsandro</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Alisson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Alisson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#analise"/>
+        <rdfs:label xml:lang="pt">Alisson</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Alysson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Alysson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <atividade_encontrada rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#O_que_eh_Maquina_de_Turing"/>
+        <rdfs:label xml:lang="pt">Alysson</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Antonio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Antonio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <atividade_encontrada rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Forum_avisos"/>
+        <rdfs:label xml:lang="pt">Antonio</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Apreciar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Apreciar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Avaliar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Avaliar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Benjamin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Benjamin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <atividade_encontrada rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#O_que_eh_Maquina_de_Turing"/>
+        <rdfs:label xml:lang="pt">Benjamin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estrutura_classificacao"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_1"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom"/>
+        <tem_objetivo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#conhecimento"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_2"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom"/>
+        <tem_objetivo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#compreensao"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_3"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom"/>
+        <tem_objetivo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#aplicacao"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_4"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom"/>
+        <tem_objetivo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#analise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_5"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom"/>
+        <tem_objetivo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#sintese"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_6"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom"/>
+        <tem_objetivo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#avaliacao"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estrutura_classificacao"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_1"/>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada"/>
+        <tem_objetivo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#lembrar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_2"/>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada"/>
+        <tem_objetivo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#entender"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_3"/>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada"/>
+        <tem_objetivo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#aplicar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_4"/>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada"/>
+        <tem_objetivo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#analisar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_5"/>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico_6"/>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bruno -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bruno">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <atividade_encontrada rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Liste_2_numeros"/>
+        <rdfs:label xml:lang="pt">Bruno</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Cedma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Cedma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estabeleca"/>
+        <rdfs:label xml:lang="pt">Cedma</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Charles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Charles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estabeleca"/>
+        <rdfs:label xml:lang="pt">Charles</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Combinar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Combinar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Compreender -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Compreender"/>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Credson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Credson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#distingua"/>
+        <rdfs:label xml:lang="pt">Credson</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Criar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Criar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Criticar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Criticar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desenvolva_equacao_2_grau -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desenvolva_equacao_2_grau">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Atividade"/>
+        <tem_competencia rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Entender_maquina_turing"/>
+        <tem_nivel rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#sintese"/>
+        <rdfs:label xml:lang="pt">Desenvolva_equacao_2_grau</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desenvolver_MT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desenvolver_MT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Competencia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Diego -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Diego">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estabeleca"/>
+        <rdfs:label xml:lang="pt">Diego</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Dimas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Dimas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#projete"/>
+        <rdfs:label xml:lang="pt">Dimas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Distinguir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Distinguir"/>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Entender_maquina_turing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Entender_maquina_turing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Competencia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Forum_avisos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Forum_avisos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Atividade"/>
+        <tem_competencia rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desenvolver_MT"/>
+        <tem_nivel rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#aplicacao"/>
+        <rdfs:label xml:lang="pt">Forum_avisos</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Gerlan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Gerlan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#enumere"/>
+        <rdfs:label xml:lang="pt">Gerlan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Gilberto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Gilberto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#distingua"/>
+        <rdfs:label xml:lang="pt">Gilberto</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Hiury -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Hiury">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#projete"/>
+        <rdfs:label xml:lang="pt">Hiury</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Hugo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Hugo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#relate"/>
+        <rdfs:label xml:lang="pt">Hugo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Ingridy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Ingridy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#rotule"/>
+        <rdfs:label xml:lang="pt">Ingridy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Integrar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Integrar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Interpretar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Interpretar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Isaias -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Isaias">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#identifique"/>
+        <rdfs:label xml:lang="pt">Isaias</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Jeferson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Jeferson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estabeleca"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Jonathan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Jonathan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#distingua"/>
+        <rdfs:label xml:lang="pt">Jonathan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Jose -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Jose">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#defina"/>
+        <rdfs:label xml:lang="pt">Jose</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Kleiton -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Kleiton">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#distingua"/>
+        <rdfs:label xml:lang="pt">Kleiton</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Liste_2_numeros -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Liste_2_numeros">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Atividade"/>
+        <tem_competencia rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desenvolver_MT"/>
+        <tem_nivel rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#avaliacao"/>
+        <rdfs:label xml:lang="pt">Liste_2_numeros</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Maria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Maria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#reproduza"/>
+        <rdfs:label xml:lang="pt">Maria</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Mariza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Mariza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#evoque"/>
+        <rdfs:label xml:lang="pt">Mariza</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#O_que_eh_Maquina_de_Turing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#O_que_eh_Maquina_de_Turing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Atividade"/>
+        <tem_competencia rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Entender_maquina_turing"/>
+        <tem_nivel rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#compreensao"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Pablo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Pablo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estabeleca"/>
+        <rdfs:label xml:lang="pt">Pablo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Rafael -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Rafael">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#resumir"/>
+        <rdfs:label xml:lang="pt">Rafael</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Raimundo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Raimundo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#liste"/>
+        <rdfs:label xml:lang="pt">Raimundo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Reconhecer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Reconhecer">
+        <tem_desempenho rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Recordar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Recordar">
+        <tem_desempenho rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Relacionar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Relacionar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Resolver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Resolver"/>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Salatiel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Salatiel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#escreva"/>
+        <rdfs:label xml:lang="pt">Salatiel</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Traduzir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Traduzir"/>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Usar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Usar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Vladimir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Vladimir">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#distingua"/>
+        <rdfs:label xml:lang="pt">Vladimir</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Wilamis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Wilamis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+        <verbo_encontrado rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#crie"/>
+        <rdfs:label xml:lang="pt">Wilamis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#adaptar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#adaptar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#agrupar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#agrupar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#analisar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#analisar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_4"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada"/>
+        <objetivo_atingido rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#aplicar"/>
+        <objetivo_atingido rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#entender"/>
+        <objetivo_atingido rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#lembrar"/>
+        <tem_desempenho rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada_4"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#resumir"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#analise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#analise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_4"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom"/>
+        <objetivo_atingido rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#aplicacao"/>
+        <objetivo_atingido rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#compreensao"/>
+        <objetivo_atingido rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#conhecimento"/>
+        <tem_desempenho rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_4"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#analise"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#arranje"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#categorize"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#classifique"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#compare"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#conecte"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#contraste"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#deduza"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#diagrame"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#discrimine"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#divida"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#focalize"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#indique"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#priorize"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#separe"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">analise</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#antecipar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#antecipar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#aplicacao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#aplicacao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_3"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom"/>
+        <objetivo_atingido rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#compreensao"/>
+        <objetivo_atingido rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#conhecimento"/>
+        <tem_desempenho rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_3"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#aplique"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#articule"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#calcule"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#compute"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#construa"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#demonstre"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#descubra"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#determine"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#ensine"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estabeleca"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#experimente"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#prepare"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#resolva"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#termine"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#transfira"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#use"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#aplicar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#aplicar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_3"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada"/>
+        <objetivo_atingido rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#entender"/>
+        <objetivo_atingido rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#lembrar"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#classificar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#aplique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#aplique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aplique</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#argumente -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#argumente">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">argumente</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#arranje -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#arranje">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">arranje</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#articule -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#articule">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">articule</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#associe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#associe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">associe</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#avaliacao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#avaliacao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_6"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom"/>
+        <objetivo_atingido rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#analise"/>
+        <objetivo_atingido rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#aplicacao"/>
+        <objetivo_atingido rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#compreensao"/>
+        <objetivo_atingido rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#conhecimento"/>
+        <objetivo_atingido rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#sintese"/>
+        <tem_desempenho rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_6"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#argumente"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#avalie"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#conclua"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#convenca"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#critique"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#decida"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#julgue"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#justifique"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#recomende"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#teste"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#avaliar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#avaliar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_5"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#avalie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#avalie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avalie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#calcule -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#calcule">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">calcule</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#categorize -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#categorize">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categorize</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#cite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#cite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cite</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#classificar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#classificar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classificar</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#classifique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#classifique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classifique</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#colete -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#colete">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">colete</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#compare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#compare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">compare</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#compile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#compile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">compile</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#componha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#componha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">componha</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#compreensao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#compreensao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_2"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom"/>
+        <objetivo_atingido rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#conhecimento"/>
+        <tem_desempenho rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_2"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#associe"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#converta"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#descreva"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#diferencie"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#discuta"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#distingua"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estenda"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estimule"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#explique"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#ilustre"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#interprete"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#ordene"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#parafraseie"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#resuma"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#sumarize"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#traduza"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#compute -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#compute">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">compute</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#conclua -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#conclua">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">conclua</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#conecte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#conecte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">conecte</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#conhecimento -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#conhecimento">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_1"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom"/>
+        <tem_desempenho rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_1"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#cite"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#colete"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#copie"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#defina"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#diga"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#enumere"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#escreva"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#evoque"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#identifique"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#liste"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#mostre"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#nomeie"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#relate"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#reproduza"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#rotule"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#selecione"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tabule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#construa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#construa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">construa</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#contraste -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#contraste">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contraste</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#convenca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#convenca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">convenca</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#converta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#converta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">converta</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#copie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#copie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">copie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#criar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#criar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_6"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#crie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#crie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">crie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#critique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#critique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">critique</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#decida -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#decida">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decida</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#deduza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#deduza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deduza</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#defina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#defina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">defina</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#demonstre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#demonstre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">demonstre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#descreva -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#descreva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">descreva</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#descubra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#descubra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">descubra</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desenvolva -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desenvolva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">desenvolva</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#determine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#determine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">determine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#diagrame -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#diagrame">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">diagrame</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#diferencie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#diferencie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">diferencie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#diga -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#diga">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">diga</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#discrimine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#discrimine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">discrimine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#discuta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#discuta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">discuta</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#distingua -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#distingua">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">distingua</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#divida -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#divida">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">divida</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#elabore -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#elabore">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">elabore</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#ensine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#ensine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ensine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#entender -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#entender">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_2"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada"/>
+        <objetivo_atingido rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#lembrar"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#explicar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#enumere -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#enumere">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enumere</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#escreva -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#escreva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">escreva</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estabeleca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estabeleca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">estabeleca</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estenda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estenda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">estenda</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estimule -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estimule">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">estimule</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#evoque -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#evoque">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">evoque</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#experimente -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#experimente">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">experimente</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#explicar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#explicar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">explicar</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#explique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#explique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">explique</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#focalize -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#focalize">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">focalize</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#formule -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#formule">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">formule</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#generalize -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#generalize">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">generalize</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#hipotese -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#hipotese">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hipotese</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#identifique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#identifique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">identifique</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#ilustre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#ilustre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ilustre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#indique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#indique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">indique</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#integre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#integre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">integre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#interprete -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#interprete">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">interprete</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#invente -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#invente">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">invente</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#julgue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#julgue">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">julgue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#justifique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#justifique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">justifique</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#lembrar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#lembrar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_1"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#listar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#ligue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#ligue">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ligue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#listar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#listar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">listar</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#liste -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#liste">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liste</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#modifique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#modifique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modifique</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#mostre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#mostre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mostre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#nomeie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#nomeie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nomeie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#ordene -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#ordene">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ordene</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#parafraseie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#parafraseie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parafraseie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#planeje -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#planeje">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">planeje</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#prepare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#prepare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prepare</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#priorize -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#priorize">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">priorize</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#projete -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#projete">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">projete</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#proponha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#proponha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proponha</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#rearranje -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#rearranje">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rearranje</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#recomende -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#recomende">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recomende</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#reescreva -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#reescreva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reescreva</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#relate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#relate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relate</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#reproduza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#reproduza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reproduza</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#resolva -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#resolva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resolva</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#resuma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#resuma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resuma</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#resumir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#resumir">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resumir</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#rotule -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#rotule">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rotule</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#selecione -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#selecione">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">selecione</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#separe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#separe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">separe</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#sintese -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#sintese">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional_5"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Objetivo_educacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <classificacao rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom"/>
+        <objetivo_atingido rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#analise"/>
+        <objetivo_atingido rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#aplicacao"/>
+        <objetivo_atingido rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#compreensao"/>
+        <objetivo_atingido rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#conhecimento"/>
+        <tem_desempenho rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_5"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#compile"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#componha"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#crie"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desenvolva"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#elabore"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#formule"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#generalize"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#hipotese"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#integre"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#invente"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#ligue"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#modifique"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#planeje"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#projete"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#proponha"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#rearranje"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#reescreva"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#substitua"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#substitua -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#substitua">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">substitua</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#sumarize -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#sumarize">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sumarize</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tabule -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tabule">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tabule</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#termine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#termine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">termine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#teste -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#teste">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">teste</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#torne -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#torne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">torne</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#traduza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#traduza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">traduza</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#transfira -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#transfira">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transfira</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#use -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#use">
+        <rdf:type rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Verbo"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">use</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Bloom_revisada"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#a">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#o">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#e">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#n">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#at">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#v">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estudante">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estudante2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desempenho">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#comp">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#o1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#o2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Definicao da competencia atingida pelo estudante</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S13</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#e"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Atividade"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#a"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#atividade_encontrada"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#e"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#a"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_competencia"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#a"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#c"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#competencia"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#e"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Atividade"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#atividade_encontrada"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#a"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#x"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_nivel"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#x"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#n"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_nivel"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#a"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Atividade"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_nivel"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#a"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#n"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#classificacao"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#n"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#c"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#classificacao"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#a"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S6</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Atividade"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#at"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_objetivo"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#o"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#atividade_encontrada"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#at"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#a"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_atividade"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#o"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#a"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desempenho_atual"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#at"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S4</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#e"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#atividade_encontrada"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#e"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#a"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_objetivo"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#o"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_nivel"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#e"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#c"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_atividade"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#c"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S5</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#e"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_objetivo"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#o"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#verbo_encontrado"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#e"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#v"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_verbo"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#o"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#v"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desempenho_atual"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#e"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_objetivo"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#o"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#classificacao"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#o"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#c"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#classificacao"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S10</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desempenho_atual"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_objetivo"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#o"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_verbo"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#o"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#v"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_verbo"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#p"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#v"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S12</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estudante"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Estudante"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estudante2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desempenho_atual"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estudante"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desempenho"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desempenho_atual"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estudante2"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desempenho"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#competencia"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estudante"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#comp"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#competencia"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estudante2"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#comp"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desempenho_similar"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estudante"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#estudante2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S8</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#objetivo_atingido"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#o1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#o2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desempenho_atingido"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_objetivo"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d1"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#o1"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_objetivo"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d2"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#o2"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desempenho_atingido"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#p"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S7</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#objetivo_atingido"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#o1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#o2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_objetivo"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d1"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#o1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_objetivo"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d2"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#o2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desempenho_atual"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#p"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d1"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desempenho_atingido"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#p"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S9</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Atividade"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#Desempenho_academico"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#desempenho_atual"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#a"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#tem_objetivo"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#d"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#o"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#objetivo_atingido"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#a"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/laeciocosta/ontologies/2018/7/sapes#o"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
